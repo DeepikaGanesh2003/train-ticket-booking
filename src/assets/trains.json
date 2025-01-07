@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Ndls Cnb Sht",
+      "from": "New Delhi",
+      "to": "Kanpur",
+      "departure": "3:50 PM",
+      "arrival": "8:50 PM",
+      "class": "CC",
+      "price": 1055
+    },
+    {
+      "name": "Purushottam Exp",
+      "from": "New Delhi",
+      "to": "Kanpur",
+      "departure": "10:40 PM",
+      "arrival": "4:00 AM",
+      "class": "SL",
+      "price": 425
+    },
+    {
+        "name": "Ndls Cnb Sht",
+        "from": "Chennai",
+        "to": "Kanpur",
+        "departure": "3:50 PM",
+        "arrival": "8:50 PM",
+        "class": "CC",
+        "price": 1055
+      },
+      {
+        "name": "Purushottam Exp",
+        "from": "New Delhi",
+        "to": "Kanpur",
+        "departure": "10:40 PM",
+        "arrival": "4:00 AM",
+        "class": "SL",
+        "price": 425
+      }
+  ]
+  

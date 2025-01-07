@@ -1,0 +1,65 @@
+<div class="navbar">
+    <div class="nav-item">Flights</div>
+    <div class="nav-item">Hotels</div>
+    <div class="nav-item">Homestays & Villas</div>
+    <div class="nav-item">Holiday Packages</div>
+    <div class="nav-item active">Trains</div>
+    <div class="nav-item">Buses</div>
+    <div class="nav-item">Cabs</div>
+    <div class="nav-item">Forex Card & Currency</div>
+    <div class="nav-item">Travel Insurance</div>
+  </div>
+  
+  <div class="search-container">
+    <h2>Train Ticket Booking</h2>
+    <div class="booking-options">
+      <label>
+        <input type="radio" name="booking-type" checked />
+        Book Train Tickets
+      </label>
+      <label>
+        <input type="radio" name="booking-type" />
+        Check PNR Status
+      </label>
+      <label>
+        <input type="radio" name="booking-type" />
+        Live Train Status
+      </label>
+    </div>
+  
+    <div class="form-group">
+      <label for="from">From:</label>
+      <input
+        id="from"
+        [(ngModel)]="from"
+        (input)="filterLocations('from')"
+        list="from-options"
+        placeholder="Enter departure station"
+      />
+      <datalist id="from-options">
+        <option *ngFor="let location of filteredFromLocations" [value]="location"></option>
+      </datalist>
+    </div>
+  
+    <div class="form-group">
+      <label for="to">To:</label>
+      <input
+        id="to"
+        [(ngModel)]="to"
+        (input)="filterLocations('to')"
+        list="to-options"
+        placeholder="Enter destination station"
+      />
+      <datalist id="to-options">
+        <option *ngFor="let location of filteredToLocations" [value]="location"></option>
+      </datalist>
+    </div>
+  
+    <div class="form-group">
+      <label for="date">Travel Date:</label>
+      <input type="date" id="date" [(ngModel)]="travelDate" />
+    </div>
+  
+    <button class="search-button" (click)="search()">Search</button>
+  </div>
+  

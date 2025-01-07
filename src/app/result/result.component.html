@@ -1,0 +1,35 @@
+
+<div class="results-container">
+    <h2>Available Trains</h2>
+    <div class="trains-list">
+      <div *ngFor="let train of train" class="train-card">
+        <div class="train-header">
+          <h3>{{ train.name }}</h3>
+          <p>#{{ train.number }} | Depart on: {{ train.days }}</p>
+        </div>
+        <div class="train-details">
+          <div class="time-info">
+            <p>{{ train.departureTime }}, {{ train.departureDate }}</p>
+            <p>{{ train.departureStation }}</p>
+          </div>
+          <div class="time-info">
+            <p>{{ train.arrivalTime }}, {{ train.arrivalDate }}</p>
+            <p>{{ train.arrivalStation }}</p>
+          </div>
+          <div class="duration-info">
+            <p>{{ train.duration }}</p>
+            <a href="#">View Route</a>
+          </div>
+        </div>
+        <div class="fare-info">
+          <div *ngFor="let fare of train.fares" class="fare-class">
+            <span class="class-name">{{ fare.class }}</span>
+            <span class="availability">Available {{ fare.available }}</span>
+            <span class="price">₹{{ fare.price }}</span>
+            <small>{{ fare.updated }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
